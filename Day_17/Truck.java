@@ -1,0 +1,14 @@
+
+public class Truck extends Vehicle {
+
+    private static final double INSURANCE = 500.0;
+
+    public Truck(int id, String model, double dailyRate) {
+        super(id, model, dailyRate);
+    }
+
+    @Override
+    public double calculateRent(int days) {
+        return (dailyRate * days) + INSURANCE;
+    }
+}
